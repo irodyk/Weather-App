@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_weather"
+    app:startDestination="@id/weatherListFragment">
+
+    <fragment
+        android:id="@+id/weatherListFragment"
+        android:name="com.example.weatherapptest.weather.list.WeatherListFragment"
+        android:label="WeatherListFragment"
+        tools:layout="@layout/fragment_weather_list" >
+        <action
+            android:id="@+id/actionWeatherDetails"
+            app:destination="@id/weatherDetailsFragment"
+            app:enterAnim="@anim/fragment_from_right"
+            app:exitAnim="@anim/fragment_to_left"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherDetailsFragment"
+        android:name="com.example.weatherapptest.weather.detail.WeatherDetailsFragment"
+        android:label="WeatherDetailsFragment"
+        tools:layout="@layout/fragment_weather_list">
+
+        <argument
+            android:name="weatherId"
+            app:argType="string"
+            android:defaultValue="" />
+        <!--        <action-->
+<!--            android:id="@+id/actionWeatherDetails"-->
+<!--            app:destination="@+id/actionWeatherList"-->
+<!--            app:enterAnim="@anim/fragment_from_right"-->
+<!--            app:exitAnim="@anim/fragment_to_left"-->
+<!--            app:popExitAnim="@anim/fragment_fade_exit"-->
+<!--            app:popUpTo="@id/weatherListFragment"-->
+<!--            app:popUpToInclusive="false" />-->
+    </fragment>
+</navigation>

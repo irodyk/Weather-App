@@ -1,0 +1,22 @@
+dependencies {
+    dependencies {
+
+        // kotlin
+        implementation 'androidx.core:core-ktx:1.9.0'
+
+        // coroutine
+        implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+        implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+
+        // retrofit
+        implementation 'com.squareup.retrofit2:retrofit:2.7.2'
+        implementation 'com.squareup.retrofit2:converter-gson:2.7.2'
+        implementation 'com.squareup.okhttp3:okhttp:4.7.2'
+
+        // test dependencies
+        testImplementation 'junit:junit:4.13.2'
+        testImplementation 'org.mockito:mockito-core:3.3.3'
+        testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4'
+        androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    }
+}

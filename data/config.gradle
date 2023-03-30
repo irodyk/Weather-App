@@ -1,0 +1,5 @@
+android {
+    defaultConfig {
+        buildConfigField "String", "BASE_URL", "\"https://testapi.io/api/\""
+    }
+}
